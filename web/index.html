@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POS Kasir - Prototipe</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>POS Kasir (Prototipe)</h1>
+    <div id="auth">
+      <input id="username" placeholder="username" />
+      <input id="password" type="password" placeholder="password" />
+      <button onclick="login()">Login</button>
+      <span id="who"></span>
+    </div>
+  </header>
+
+  <nav>
+    <button onclick="show('cashier')">Kasir</button>
+    <button onclick="show('kitchen')">Dapur</button>
+    <button onclick="show('menu')">Menu</button>
+  </nav>
+
+  <main>
+    <section id="cashier" class="view">
+      <h2>Daftar Menu</h2>
+      <div id="menuList" class="grid"></div>
+      <h2>Keranjang</h2>
+      <div id="cart"></div>
+      <button onclick="checkout()">Bayar / Buat Order</button>
+      <h2>Pesanan</h2>
+      <div id="orders"></div>
+    </section>
+
+    <section id="kitchen" class="view" style="display:none">
+      <h2>Layar Dapur</h2>
+      <div id="kitchenOrders"></div>
+    </section>
+
+    <section id="menu" class="view" style="display:none">
+      <h2>Kelola Menu (admin)</h2>
+      <div id="menuManage"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

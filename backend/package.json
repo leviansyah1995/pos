@@ -1,0 +1,18 @@
+{
+  "name": "pos-backend",
+  "version": "0.1.0",
+  "description": "POS cashier backend (Fastify) - prototype",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/jwt": "^8.0.1",
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.28.1",
+    "uuid": "^9.0.1"
+  }
+}
